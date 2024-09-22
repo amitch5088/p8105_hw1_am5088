@@ -9,7 +9,7 @@ output:
       code_floating: hide
 ---
 
-I'm an R Markdown document! 
+The following problems are for HW1
 
 # Problem 1
 ## Importing the dataset
@@ -41,10 +41,24 @@ The mean flipper length is 201 mm.
 
 ## Scatterplot
 this code chunk creates a data frame and generates a plot
-```{r scatterplot, echo=TRUE}
-ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+```{r scatterplot, echo=TRUE}}
+ ggplot2(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
 ```
 
+#Problem 2
+this code chunk creates a data frame comprised of the following:
+*a random sample of size 10 from a standard Normal distribution
+*a logical vector indicating whether elements of the sample are greater than 0
+*a character vector of length 10
+*a factor vector of length 10, with 3 different factor “levels”
 
+```{r}
+problem2_df = tibble(
+  vec_numeric = 1 : 10,
+  
+)
+
+```
 
 I can take the mean of the sample, too!
