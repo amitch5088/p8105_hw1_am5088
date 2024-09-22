@@ -41,8 +41,9 @@ The mean flipper length is 201 mm.
 
 ## Scatterplot
 this code chunk creates a data frame and generates a plot
-```{r scatterplot, echo=TRUE}}
- ggplot2(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+```{r scatterplot, echo=TRUE}
+library(ggplot2) 
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 
 ```
 
@@ -53,13 +54,5 @@ this code chunk creates a data frame comprised of the following:
 *a character vector of length 10
 *a factor vector of length 10, with 3 different factor “levels”
 
-```{r}
-problem2_df = tibble(
-  vec_numeric = 1 : 10,
-  vec_char = c("maximizing"),
-  vec_logic = 
-)
-
-```
 
 I can take the mean of the sample, too!
