@@ -21,7 +21,7 @@ a _penguins_ dataset:
 data("penguins", package = "palmerpenguins")
 
 ```
-##Take a look at the data
+## Take a look at the data
 ```{r, include=FALSE}
 tail(penguins)
 ```
@@ -45,14 +45,28 @@ this code chunk creates a data frame and generates a plot
 library(ggplot2) 
 ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
 
+ggsave("penguins_scatter_plot.pdf", height = 4, width = 6)
+
 ```
 
-#Problem 2
-this code chunk creates a data frame comprised of the following:
-*a random sample of size 10 from a standard Normal distribution
-*a logical vector indicating whether elements of the sample are greater than 0
-*a character vector of length 10
-*a factor vector of length 10, with 3 different factor “levels”
+# Problem 2
 
+This code chunk creates a random sample of size 10 from a standard Normal distribution:
+```{r}
+x = rnorm(10)
+```
 
-I can take the mean of the sample, too!
+This code chunk creates a data frame comprised of the following:
+
+* a logical vector indicating whether elements of the sample are greater than 0
+* a character vector of length 10
+* a factor vector of length 10, with 3 different factor “levels”
+
+```{r problem2_df, message=FALSE}
+library(tidyverse)
+tibble(
+  vec_logical = c(x>0), 
+  vec_char = c("My", "name", "is", "Anika", "and", "I", "love", "coding", "in", "R"),
+  vec_factor = factor(c("lvl1", "lvl2", "lvl3", "lvl3", "lvl2", "lvl1", "lvl3", "lvl2", "lvl3", "lvl1" )) 
+)
+```
