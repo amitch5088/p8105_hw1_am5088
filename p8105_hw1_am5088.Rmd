@@ -1,21 +1,50 @@
 ---
-title: "Simple document"
-output: html_document
+title: "HW 1 am5088"
+author: Anika Mitchell
+date: Sept 21, 2024
+output:
+  html_document:
+      toc: true
+      toc_float: true
+      code_floating: hide
 ---
 
 I'm an R Markdown document! 
 
-# Section 1
+# Problem 1
+## Importing the dataset
 
-Here's a **code chunk** that samples from 
-a _normal distribution_:
+Here's a **code chunk** that loads the 
+a _penguins_ dataset:
 
-```{r}
-samp = rnorm(100)
-length(samp)
+```{r setup}
+data("penguins", package = "palmerpenguins")
+
+```
+##Take a look at the data
+```{r, include=FALSE}
+tail(penguins)
 ```
 
-# Section 2
+```{r, message=FALSE}
+skimr::skim(penguins)
+```
+
+
+
+## Dataset Description
+The data in this dataset include 344 observations (rows) and 8 variables (columns) including the species (Adelie, Gentoo, Chinstrap), island (Torgersen, Biscoe, Dream), bill length (in mm), bill depth (in mm), flipper length (in mm), body mass (in g), sex, and year of penguins.
+
+The mean flipper length is 201 mm. 
+
+# Data Visualization
+
+## Scatterplot
+this code chunk creates a data frame and generates a plot
+```{r scatterplot, echo=TRUE}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+```
+
+
 
 I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
