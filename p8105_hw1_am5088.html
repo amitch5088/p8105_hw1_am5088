@@ -1723,22 +1723,22 @@ greater than 0</li>
 </ul>
 <pre class="r"><code>library(tidyverse)
 tibble(
-  vec_logical = c(x&gt;0), 
+  vec_logical = (x&gt;0), 
   vec_char = c(&quot;My&quot;, &quot;name&quot;, &quot;is&quot;, &quot;Anika&quot;, &quot;and&quot;, &quot;I&quot;, &quot;love&quot;, &quot;coding&quot;, &quot;in&quot;, &quot;R&quot;),
   vec_factor = factor(c(&quot;lvl1&quot;, &quot;lvl2&quot;, &quot;lvl3&quot;, &quot;lvl3&quot;, &quot;lvl2&quot;, &quot;lvl1&quot;, &quot;lvl3&quot;, &quot;lvl2&quot;, &quot;lvl3&quot;, &quot;lvl1&quot; )) 
 )</code></pre>
 <pre><code>## # A tibble: 10 × 3
 ##    vec_logical vec_char vec_factor
 ##    &lt;lgl&gt;       &lt;chr&gt;    &lt;fct&gt;     
-##  1 TRUE        My       lvl1      
+##  1 FALSE       My       lvl1      
 ##  2 TRUE        name     lvl2      
-##  3 TRUE        is       lvl3      
+##  3 FALSE       is       lvl3      
 ##  4 TRUE        Anika    lvl3      
 ##  5 FALSE       and      lvl2      
 ##  6 TRUE        I        lvl1      
-##  7 TRUE        love     lvl3      
-##  8 TRUE        coding   lvl2      
-##  9 TRUE        in       lvl3      
+##  7 FALSE       love     lvl3      
+##  8 FALSE       coding   lvl2      
+##  9 FALSE       in       lvl3      
 ## 10 FALSE       R        lvl1</code></pre>
 </div>
 
