@@ -56,7 +56,8 @@ this code chunk creates a data frame comprised of the following:
 ```{r}
 problem2_df = tibble(
   vec_numeric = 1 : 10,
-  
+  vec_char = c("maximizing"),
+  vec_logic = 
 )
 
 ```
