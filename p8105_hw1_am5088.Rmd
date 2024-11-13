@@ -63,7 +63,8 @@ This code chunk creates a data frame comprised of the following:
 
 ```{r problem2_df, message=FALSE}
 library(tidyverse)
-df= tibble(
+df_problem2s= tibble(
+  vec_numeric = x,
   vec_logical = (x>0), 
   vec_char = c("My", "name", "is", "Anika", "and", "I", "love", "coding", "in", "R"),
   vec_factor = factor(c("lvl1", "lvl2", "lvl3", "lvl3", "lvl2", "lvl1", "lvl3", "lvl2", "lvl3", "lvl1" )) 
@@ -77,3 +78,4 @@ mean(df$vec_logical)
 mean(pull(df,vec_char))
 mean(df$vec_factor)
 ```
+
